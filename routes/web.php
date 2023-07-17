@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\StatsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/prueba', function(){
-    return view ('prueba');
-});
+Route::resource('items', ItemController::class)->names('items');
+
+Route::resource('history', HistoryController::class)->names('history');
+
+Route::resource('stats', StatsController::class)->names('stats');
+

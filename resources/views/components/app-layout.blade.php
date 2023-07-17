@@ -16,14 +16,17 @@
 </button> --}}
 
 {{-- Left-sideBar --}}
+
 <div class="flex">
-    @include('layouts.navigation');
+   {{-- Aside left --}}
+   @include('layouts.navigation')
 {{-- end left side --}}
-<section class="container flex-initial w-3/4 h-screen bg-gray-100 overflow-auto">
-    <div class="container p-9 flex flex-col gap-10 ">
-      
+<main class="container flex-initial w-3/4 h-screen bg-gray-100 overflow-auto"> 
+     <div class="container p-9 flex flex-col gap-10 ">
+        {{-- Search-bar --}}
+      {{$slot}}
     </div>
-</section>
+</main>
 {{-- End first-category --}}
 
 
@@ -131,5 +134,6 @@
     </div>
 </aside>
 </div>
+    {{-- end right side --}}
 </body>
 </html>
