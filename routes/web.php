@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('items', ItemController::class)->names('items');
+Route::resource('/items', ItemController::class)->names('items');
 
 Route::resource('history', HistoryController::class)->names('history');
 

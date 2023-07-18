@@ -3,7 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Category;
+use App\Models\Item;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        //arreglo de las categorias
+        $categories = ["Fruits and vegetables", "Meat and fish", "Beverages"];
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        //insertar las categorias
+        foreach($categories as $category){
+            DB::table("categories")->insert([
+                "name" => $category 
+            ]);
+        }
+        //factory de los items
+        Item::factory(18)->create();
     }
 }
