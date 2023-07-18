@@ -1,5 +1,5 @@
 <aside id="cta-button-sidebar" class=" flex-initial w-20 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800" >
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50" >
         <ul class="space-y-2 h-full font-medium flex flex-col justify-between">
             <li class="p-2">
                 <a href= "{{ route('items.index') }}">

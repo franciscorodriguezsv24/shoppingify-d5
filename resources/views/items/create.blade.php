@@ -1,3 +1,4 @@
+
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add a new item</h5>
@@ -20,12 +21,12 @@
 </div>
 <div class="mb-6">
   <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 ">Category</label>
-  {{-- @include("items.create"); --}}
-  {{-- <select id="countries" name="category_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  @include("items.create");
+  <select id="countries" name="category_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
     @foreach ($categorias as $categoria)
         <option value="{{$categoria->name}}">{{$categoria->name}}</option>
     @endforeach
-  </select> --}}
+  </select>
 </div>   
 <div class="flex flex-row gap-3 justify-center">
   <button type="submit" class="text-black hover:border-2 hover:border-orange-500 rounded-md p-2">cancel</button>

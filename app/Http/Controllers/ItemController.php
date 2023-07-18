@@ -13,6 +13,7 @@ class ItemController extends Controller
      */
     public function index(){
         $categories = Category::all();
+        // return $categories[1]->items;
         return view("items/index", compact("categories"));
     }
     /**
@@ -20,7 +21,9 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        // return $categories[1]->items
+        return view("items/create", compact("categories"));
     }
 
     /**

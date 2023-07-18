@@ -6,8 +6,11 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Item;
+use App\Models\ItemListName;
+use App\Models\ListName;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\List_;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,5 +30,10 @@ class DatabaseSeeder extends Seeder
         }
         //factory de los items
         Item::factory(18)->create();
+        //factory de las listas
+        ListName::factory(10)->create();
+        // //factory de los items relacionados a las listas
+        ItemListName::factory(5)->create();
+
     }
 }
